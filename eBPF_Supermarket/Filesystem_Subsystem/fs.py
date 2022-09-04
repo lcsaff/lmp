@@ -44,15 +44,15 @@ args = parser.parse_args()
 
 if args.open:
     print("Tracing open syscall...")
-    os.system("./tools/open.py")
+    os.system("sudo ./tools/open.py")
 
 if args.read:
     print("Tracing read syscall...")
-    os.system("./tools/read.py")
+    os.system("sudo ./tools/read.py")
     
 if args.write:
     print("Tracing write syscall...")
-    os.system("./tools/write.py")
+    os.system("sudo ./tools/write.py")
     
 # if args.create:
 #     print("Tracing create syscall...")
@@ -64,15 +64,15 @@ if args.write:
     
 if args.vfs_func:
     print("Tracing vfs functions...")
-    os.system("./tools/vfs.py")
+    os.system("sudo ./tools/vfs.py")
     
 if args.pcache:
     print("Tracing page cache stat...")
-    os.system("./tools/pcache.py")
+    os.system("sudo ./tools/pcache.py")
 
 if args.dcache:
     print("Tracing dentry cache stat...")
-    os.system("./tools/dcache.py")
+    os.system("sudo ./tools/dcache.py")
     
 else:
     print(usage)
